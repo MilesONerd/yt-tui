@@ -1,8 +1,9 @@
 [package]
 name = "yt-tui"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Enzo Costa Fuke"]
+repository = "https://github.com/MilesONerd/yt-tui"
 license = "MIT OR Apache-2.0"
 description = "A terminal YouTube player: yt-dlp for search, a single long-lived mpv instance (controlled over IPC) for playback, and a ratatui interface."
 readme = "README.md"
