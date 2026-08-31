@@ -1,0 +1,41 @@
+[package]
+name = "yt-tui"
+version = "0.1.0"
+edition = "2021"
+authors = ["Enzo Costa Fuke"]
+license = "MIT OR Apache-2.0"
+description = "A terminal YouTube player: yt-dlp for search, a single long-lived mpv instance (controlled over IPC) for playback, and a ratatui interface."
+readme = "README.md"
+keywords = ["youtube", "tui", "mpv", "yt-dlp", "terminal"]
+categories = ["command-line-utilities", "multimedia::audio", "multimedia::video"]
+
+# Explicit lib/bin split so the crate is useful both as the `yt-tui`
+# binary and as a library (e.g. for building an alternative frontend on
+# top of the same yt-dlp/mpv/history plumbing) — see src/lib.rs.
+[lib]
+name = "yt_tui"
+path = "src/lib.rs"
+
+[[bin]]
+name = "yt-tui"
+path = "src/main.rs"
+# The bin and lib crate names both normalize to `yt_tui` for doc output
+# paths, which collides with the lib's docs (a known cargo limitation —
+# rust-lang/cargo#6313). The binary has no public API of its own anyway,
+# so skip documenting it and let docs.rs/`cargo doc` show only the lib.
+doc = false
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+ratatui = "0.28"
+crossterm = { version = "0.28", features = ["event-stream"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+futures = "0.3"
+anyhow = "1"
+tokio-stream = "0.1"
+
+[profile.release]
+lto = true
+strip = true
