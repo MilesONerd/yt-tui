@@ -11,7 +11,7 @@ asynchronously with `tokio`.
 sudo apt install mpv
 pip install -U yt-dlp
 
-cargo run --release
+cargo install yt-tui
 ```
 
 ## Documentation
