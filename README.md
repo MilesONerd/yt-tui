@@ -3,6 +3,7 @@
 [![Crates.io](https://img.shields.io/crates/v/yt-tui.svg)](https://crates.io/crates/yt-tui)
 [![Downloads](https://img.shields.io/crates/d/yt-tui.svg)](https://crates.io/crates/yt-tui)
 [![License: MIT OR Apache-2.0](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg)](https://github.com/MilesONerd/yt-tui)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MilesONerd/yt-tui)
 
 Terminal YouTube player: search via `yt-dlp`, playback via `mpv` (single
 instance, IPC-controlled), interface with `ratatui`, all orchestrated
